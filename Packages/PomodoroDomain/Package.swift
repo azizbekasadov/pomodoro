@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "PomodoroDomain",
+    platforms: [.iOS(.v17), .macOS(.v12), .tvOS(.v17), .watchOS(.v10)],
     products: [
         .library(
             name: "PomodoroDomain",

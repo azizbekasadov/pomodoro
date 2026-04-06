@@ -50,8 +50,7 @@ extension ClockTests {
         file: StaticString = #filePath,
         line: UInt = #line
     ) -> (sut: StartPomodoroUseCase, clock: Clock){
-        let now = anyDateNow()
-        let clock = FixedClock(now: now)
+        let clock = FixedClock(now: anyDateNow())
         let sut = StartPomodoroUseCase(clock: clock)
         
         return (sut, clock)

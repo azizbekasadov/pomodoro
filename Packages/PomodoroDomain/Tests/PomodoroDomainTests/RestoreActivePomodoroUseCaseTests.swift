@@ -9,19 +9,14 @@ import XCTest
 import Foundation
 import PomodoroDomain
 
+@MainActor
 final class RestoreActivePomodoroUseCaseTests: XCTestCase {
     func test_restoreActivePomodoroUseCase_execute_returnsIdleWhenStoreHasNoActivePomodoro() {
         XCTAssertEqual(makeSUT(activePomodoro: nil).execute(), .idle)
     }
 
     func test_restoreActivePomodoroUseCase_execute_returnsRunningWhenStoreHasActivePomodoro() {
-        let activePomodoro = ActivePomodoro(
-            id: UUID(),
-            phase: .focus,
-            startDate: anyStartDate(),
-            endDate: anyEndDate(),
-            completedFocusCount: 0
-        )
+        let activePomodoro = makeActivePomodoroItem()
         
         let result = makeSUT(
             activePomodoro: activePomodoro,
@@ -32,28 +27,13 @@ final class RestoreActivePomodoroUseCaseTests: XCTestCase {
     }
     
     func test_execute_returnsIdleWhenActivePomodoroIsExpired() {
-        let activePomodoro = ActivePomodoro(
-            id: UUID(),
-            phase: .focus,
-            startDate: anyStartDate(),
-            endDate: anyEndDate(),
-            completedFocusCount: 0
-        )
-        
-        XCTAssertEqual(makeSUT(activePomodoro: activePomodoro).execute(), .idle)
+        XCTAssertEqual(makeSUT(activePomodoro: makeActivePomodoroItem()).execute(), .idle)
     }
     
     func test_execute_returnsIdleWhenCurrentTimeIsAfterEndDate() {
-        let activePomodoro = ActivePomodoro(
-            id: UUID(),
-            phase: .focus,
-            startDate: anyStartDate(),
-            endDate: anyEndDate(),
-            completedFocusCount: 0
-        )
         let clock = anyFixedClock(now: Date(timeIntervalSince1970: 1_700_002_000))
         
-        let result = makeSUT(activePomodoro: activePomodoro, clock: clock).execute()
+        let result = makeSUT(activePomodoro: makeActivePomodoroItem(), clock: clock).execute()
         
         XCTAssertEqual(result, .idle)
     }
@@ -69,7 +49,7 @@ extension RestoreActivePomodoroUseCaseTests {
     ) -> RestoreActivePomodoroUseCase {
         let store = InMemoryActivePomodoroStore(activePomodoro: activePomodoro)
         let sut = RestoreActivePomodoroUseCase(store: store, clock: clock)
-        
+        trackMemoryLeaks(for: store, file: file, line: line)
         return sut
     }
     
