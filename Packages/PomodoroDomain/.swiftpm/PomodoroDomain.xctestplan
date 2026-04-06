@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "B5A27187-5D65-44A7-9FF6-D82D53DC466F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "PomodoroDomainTests",
+        "name" : "PomodoroDomainTests"
+      }
+    }
+  ],
+  "version" : 1
+}

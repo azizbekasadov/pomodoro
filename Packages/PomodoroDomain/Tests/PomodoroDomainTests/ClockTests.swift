@@ -57,14 +57,6 @@ extension ClockTests {
         return (sut, clock)
     }
     
-    private final class FixedClock: Clock {
-        let now: Date
-        
-        init(now: Date) {
-            self.now = now
-        }
-    }
-    
     private func anyDateNow() -> Date {
         Date(timeIntervalSince1970: 1_700_000_000)
     }
