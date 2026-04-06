@@ -7,28 +7,7 @@
 
 import XCTest
 import Foundation
-import PomodoroDomainc
-
-public struct StartPomodoroUseCase {
-    private let clock: Clock
-
-    public init(clock: Clock) {
-        self.clock = clock
-    }
-
-    public func execute(configuration: PomodoroConfiguration) -> ActivePomodoro {
-        let startDate = clock.now
-        let endDate = startDate.addingTimeInterval(configuration.focusDuration)
-
-        return ActivePomodoro(
-            id: UUID(),
-            phase: .focus,
-            startDate: startDate,
-            endDate: endDate,
-            completedFocusCount: 0
-        )
-    }
-}
+import PomodoroDomain
 
 final class ClockTests: XCTestCase {
     
