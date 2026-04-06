@@ -85,19 +85,3 @@ extension RestoreActivePomodoroUseCaseTests {
         }
     }
 }
-
-private func anyStartDate() -> Date {
-    Date(timeIntervalSince1970: 1_700_000_000)
-}
-
-private func anyEndDate() -> Date {
-    Date(timeIntervalSince1970: 1_700_001_500)
-}
-
-private func anyBeforeEndDate() -> Date {
-    Date(timeIntervalSince1970: 1_700_000_100)
-}
-
-private func anyFixedClock(now: Date = anyEndDate()) -> Clock {
-    FixedClock(now: now)
-}
