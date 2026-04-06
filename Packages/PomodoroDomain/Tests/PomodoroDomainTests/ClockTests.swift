@@ -10,14 +10,13 @@ import Foundation
 import PomodoroDomain
 
 final class ClockTests: XCTestCase {
-    
     func test_startPomodoroUserCase_execute_createsActiveFocusPomodoroUsingCurrentClockTime() {
         // Given
         let now = anyDateNow()
         let (sut, _) = makeSUT(now: now)
         
         // When
-        let configuration = anyPomodoroConfiguration()
+        let configuration = anyPomodoroConfiguration(with: 25)
         let result = sut.execute(configuration: configuration)
         
         // Then
@@ -25,6 +24,20 @@ final class ClockTests: XCTestCase {
         XCTAssertEqual(result.startDate, now)
         XCTAssertEqual(result.endDate, now.addingTimeInterval(25 * 60))
         XCTAssertEqual(result.completedFocusCount, 0)
+    }
+    
+    func test_startPomodoroUserCase_execute_setsEndDateByAddingFocusDurationToCurrentTime() {
+        // Given
+        let now = anyDateNow()
+        let (sut, _) = makeSUT(now: now)
+        
+        // When
+        let configuration = anyPomodoroConfiguration(with: 30)
+        let result = sut.execute(configuration: configuration)
+        
+        // Then
+        XCTAssertEqual(result.startDate, now)
+        XCTAssertEqual(result.endDate, now.addingTimeInterval(30 * 60))
     }
 }
 
@@ -56,9 +69,9 @@ extension ClockTests {
         Date(timeIntervalSince1970: 1_700_000_000)
     }
     
-    private func anyPomodoroConfiguration() -> PomodoroConfiguration {
+    private func anyPomodoroConfiguration(with focusDuration: TimeInterval = 25) -> PomodoroConfiguration {
         PomodoroConfiguration(
-            focusDuration: 25 * 60,
+            focusDuration: focusDuration * 60,
             shortBreakDuration: 5 * 60,
             loongBreakDuration: 15 * 60,
             cyclesBeforeLongBreak: 4
