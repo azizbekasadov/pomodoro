@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5DA48CB52F85AA22007EC23E /* PomodoroUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA48CB42F85AA22007EC23E /* PomodoroUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5DA48B002F840824001FFBDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,6 +23,8 @@
 /* Begin PBXFileReference section */
 		5DA48AED2F840823001FFBDF /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA48AFF2F840824001FFBDF /* PomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA48CC42F85AA48007EC23E /* PomodoroDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PomodoroDomain; path = ../../Packages/PomodoroDomain; sourceTree = SOURCE_ROOT; };
+		5DA48CC52F85AA48007EC23E /* PomodoroUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PomodoroUI; path = ../../Packages/PomodoroUI; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA48CB52F85AA22007EC23E /* PomodoroUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +62,8 @@
 		5DA48AE42F840823001FFBDF = {
 			isa = PBXGroup;
 			children = (
+				5DA48CC42F85AA48007EC23E /* PomodoroDomain */,
+				5DA48CC52F85AA48007EC23E /* PomodoroUI */,
 				5DA48AEF2F840823001FFBDF /* Pomodoro */,
 				5DA48B022F840824001FFBDF /* PomodoroTests */,
 				5DA48AEE2F840823001FFBDF /* Products */,
@@ -90,6 +99,7 @@
 			);
 			name = Pomodoro;
 			packageProductDependencies = (
+				5DA48CB42F85AA22007EC23E /* PomodoroUI */,
 			);
 			productName = Pomodoro;
 			productReference = 5DA48AED2F840823001FFBDF /* Pomodoro.app */;
@@ -148,6 +158,8 @@
 			);
 			mainGroup = 5DA48AE42F840823001FFBDF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5DA48AEE2F840823001FFBDF /* Products */;
 			projectDirPath = "";
@@ -466,6 +478,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DA48CB42F85AA22007EC23E /* PomodoroUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PomodoroUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DA48AE52F840823001FFBDF /* Project object */;
 }
