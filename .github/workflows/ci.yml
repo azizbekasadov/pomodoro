@@ -36,12 +36,13 @@ jobs:
       - name: Resolve packages
         run: |
           xcodebuild -resolvePackageDependencies \
-            -project Pomodoro.xcodeproj
+            -workspace Pomodoro.xcworkspace \
+            -scheme Pomodoro
 
       - name: Build
         run: |
           xcodebuild clean build \
-            -project Pomodoro.xcodeproj \
+            -workspace Pomodoro.xcworkspace \
             -scheme Pomodoro \
             -destination 'platform=iOS Simulator,name=iPhone 17' \
             -skipPackagePluginValidation \
@@ -51,7 +52,7 @@ jobs:
       - name: Test
         run: |
           xcodebuild test \
-            -project Pomodoro.xcodeproj \
+            -workspace Pomodoro.xcworkspace \
             -scheme Pomodoro \
             -destination 'platform=iOS Simulator,name=iPhone 17' \
             CODE_SIGNING_ALLOWED=NO
