@@ -20,8 +20,8 @@ disabled_rules:
   - todo
 
 line_length:
-  warning: 120
-  error: 160
+  warning: 160
+  error: 180
 
 type_name:
   min_length: 3
