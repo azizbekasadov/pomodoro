@@ -1,5 +1,7 @@
 # Pomodoro
 
+[![CI](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml/badge.svg)](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml)
+
 A modular, test-driven Pomodoro app for iOS built with:
 
 - SwiftUI
