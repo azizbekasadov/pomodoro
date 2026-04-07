@@ -18,6 +18,9 @@ opt_in_rules:
 
 disabled_rules:
   - todo
+  - trailing_whitespace
+  - trailing_comma
+  - sorted_imports
 
 line_length:
   warning: 160
