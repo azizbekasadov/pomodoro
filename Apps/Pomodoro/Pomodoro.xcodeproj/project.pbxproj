@@ -93,6 +93,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D7779142F85B0BC004E85C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5DA48AEF2F840823001FFBDF /* Pomodoro */,
@@ -116,6 +117,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D7779162F85B0C6004E85C0 /* PBXTargetDependency */,
 				5DA48B012F840824001FFBDF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
@@ -159,6 +161,7 @@
 			mainGroup = 5DA48AE42F840823001FFBDF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5DA48AEE2F840823001FFBDF /* Products */;
@@ -206,6 +209,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5D7779142F85B0BC004E85C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5D7779132F85B0BC004E85C0 /* SwiftLintBuildToolPlugin */;
+		};
+		5D7779162F85B0C6004E85C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5D7779152F85B0C6004E85C0 /* SwiftLintBuildToolPlugin */;
+		};
 		5DA48B012F840824001FFBDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5DA48AEC2F840823001FFBDF /* Pomodoro */;
@@ -479,7 +490,28 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		5D7779132F85B0BC004E85C0 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		5D7779152F85B0C6004E85C0 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
 		5DA48CB42F85AA22007EC23E /* PomodoroUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PomodoroUI;

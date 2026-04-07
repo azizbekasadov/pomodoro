@@ -1,0 +1,40 @@
+included:
+  - Apps/Pomodoro/Pomodoro
+  - Apps/Pomodoro/PomodoroTests
+  - Packages
+
+excluded:
+  - .build
+  - DerivedData
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - redundant_nil_coalescing
+  - sorted_imports
+
+disabled_rules:
+  - todo
+
+line_length:
+  warning: 120
+  error: 160
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 40
+    error: 50
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id
+    - x
+    - y
+
+reporter: "github-actions-logging"

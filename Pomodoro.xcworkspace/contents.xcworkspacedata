@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Apps/Pomodoro/Pomodoro.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:XCTestPlans/CI.xctestplan">
+   </FileRef>
 </Workspace>

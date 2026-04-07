@@ -1,0 +1,48 @@
+{
+  "configurations" : [
+    {
+      "id" : "86AADD9F-37C1-46B2-B724-7CC95800FA7C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Pomodoro.xcodeproj",
+      "identifier" : "5DA48AEC2F840823001FFBDF",
+      "name" : "Pomodoro"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/PomodoroDomain",
+        "identifier" : "PomodoroDomainTests",
+        "name" : "PomodoroDomainTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Pomodoro.xcodeproj",
+        "identifier" : "5DA48AFE2F840824001FFBDF",
+        "name" : "PomodoroTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/PomodoroUI",
+        "identifier" : "PomodoroUITests",
+        "name" : "PomodoroUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

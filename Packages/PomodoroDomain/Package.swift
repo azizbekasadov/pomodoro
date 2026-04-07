@@ -11,13 +11,22 @@ let package = Package(
             targets: ["PomodoroDomain"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.57.1")
+    ],
     targets: [
         .target(
-            name: "PomodoroDomain"
+            name: "PomodoroDomain",
+            plugins: [
+                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
+            ]
         ),
         .testTarget(
             name: "PomodoroDomainTests",
-            dependencies: ["PomodoroDomain"]
+            dependencies: ["PomodoroDomain"],
+            plugins: [
+                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
+            ]
         ),
     ]
 )
