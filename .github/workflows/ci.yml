@@ -38,6 +38,8 @@ jobs:
           xcodebuild -resolvePackageDependencies \
             -workspace Pomodoro.xcworkspace \
             -scheme Pomodoro
+            -skipPackagePluginValidation \
+            -skipMacroValidation
 
       - name: Build
         run: |
@@ -55,4 +57,6 @@ jobs:
             -workspace Pomodoro.xcworkspace \
             -scheme Pomodoro \
             -destination 'platform=iOS Simulator,name=iPhone 17' \
+            -skipPackagePluginValidation \
+            -skipMacroValidation \
             CODE_SIGNING_ALLOWED=NO
