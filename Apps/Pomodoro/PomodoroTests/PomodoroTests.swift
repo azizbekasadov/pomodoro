@@ -9,8 +9,7 @@ import XCTest
 @testable import Pomodoro
 
 final class PomodoroTests: XCTestCase {
-    
     func test_init() {
-        XCTAssertTrue(true)
+        XCTAssertTrue(1 == 1)
     }
 }
