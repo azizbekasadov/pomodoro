@@ -2,11 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
   pull_request:
 
 jobs:
   swiftlint:
+    name: SwiftLint
     runs-on: macos-15
 
     steps:
@@ -16,13 +19,11 @@ jobs:
       - name: Install SwiftLint
         run: brew install swiftlint
 
-      - name: Run SwiftLint autocorrect
-        run: swiftlint --fix
-
       - name: Run SwiftLint
         run: swiftlint lint --strict
 
   build-and-test:
+    name: Build and Test
     runs-on: macos-15
     needs: swiftlint
 
@@ -33,11 +34,11 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Resolve packages
+      - name: Resolve package dependencies
         run: |
           xcodebuild -resolvePackageDependencies \
             -workspace Pomodoro.xcworkspace \
-            -scheme Pomodoro
+            -scheme Pomodoro \
             -skipPackagePluginValidation \
             -skipMacroValidation
 
