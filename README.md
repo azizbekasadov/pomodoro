@@ -1,10 +1,10 @@
 # Pomodoro
 
 [![CI](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml/badge.svg)](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml)
-[![Swift](https://img.shields.io/badge/swift-5.3-brightgreen)](https://swift.org)
+[![Swift](https://img.shields.io/badge/swift-5.3-red)](https://swift.org)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 [![Contributing](https://img.shields.io/badge/contributing-guide-brightgreen)](./CONTRIBUTING.md)
-[![Last Commit](https://img.shields.io/badge/last%20commit-august%202021-orange)](../../commits/main)
+[![Last Commit](https://img.shields.io/badge/last%20commit-april%082026-orange)](../../commits/main)
 
 A modular, test-driven Pomodoro app for iOS built with:
 
