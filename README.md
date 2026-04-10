@@ -1,5 +1,10 @@
 # Pomodoro
 
+[![CI](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml/badge.svg)](https://github.com/azizbekasadov/pomodoro/actions/workflows/ci.yml)
+[![Swift](https://img.shields.io/badge/swift-6.1-red)](https://swift.org)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+[![Contributing](https://img.shields.io/badge/contributing-guide-brightgreen)](./CONTRIBUTING.md)
+
 A modular, test-driven Pomodoro app for iOS built with:
 
 - SwiftUI
