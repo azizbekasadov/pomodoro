@@ -16,7 +16,12 @@ public extension XCTestCase {
         line: UInt = #line
     ) {
         addTeardownBlock { [weak entity] in
-            XCTAssertNil(entity, "\(String(describing: entity)) must have been deallocated", file: file, line: line)
+            XCTAssertNil(
+                entity,
+                "\(String(describing: entity)) must have been deallocated",
+                file: file,
+                line: line
+            )
         }
     }
 }

@@ -1,14 +1,13 @@
 // swift-tools-version: 6.1
-
 import PackageDescription
 
 let package = Package(
-    name: "PomodoroDomain",
+    name: "PomodoroUI",
     platforms: [.iOS(.v17), .macOS(.v12), .tvOS(.v17), .watchOS(.v10)],
     products: [
         .library(
-            name: "PomodoroDomain",
-            targets: ["PomodoroDomain"]
+            name: "PomodoroUI",
+            targets: ["PomodoroUI"]
         ),
     ],
     dependencies: [
@@ -16,14 +15,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "PomodoroDomain",
+            name: "PomodoroUI",
             plugins: [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
             ]
         ),
         .testTarget(
-            name: "PomodoroDomainTests",
-            dependencies: ["PomodoroDomain"],
+            name: "PomodoroUITests",
+            dependencies: ["PomodoroUI"],
             plugins: [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
             ]

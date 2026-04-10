@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PomodoroDomain"
-               BuildableName = "PomodoroDomain"
-               BlueprintName = "PomodoroDomain"
+               BlueprintIdentifier = "PomodoroUI"
+               BuildableName = "PomodoroUI"
+               BlueprintName = "PomodoroUI"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "PomodoroDomain"
-            BuildableName = "PomodoroDomain"
-            BlueprintName = "PomodoroDomain"
+            BlueprintIdentifier = "PomodoroUI"
+            BuildableName = "PomodoroUI"
+            BlueprintName = "PomodoroUI"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

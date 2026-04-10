@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5DA48CB52F85AA22007EC23E /* PomodoroUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA48CB42F85AA22007EC23E /* PomodoroUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5DA48B002F840824001FFBDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,6 +23,8 @@
 /* Begin PBXFileReference section */
 		5DA48AED2F840823001FFBDF /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA48AFF2F840824001FFBDF /* PomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA48CC42F85AA48007EC23E /* PomodoroDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PomodoroDomain; path = ../../Packages/PomodoroDomain; sourceTree = SOURCE_ROOT; };
+		5DA48CC52F85AA48007EC23E /* PomodoroUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PomodoroUI; path = ../../Packages/PomodoroUI; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA48CB52F85AA22007EC23E /* PomodoroUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +62,8 @@
 		5DA48AE42F840823001FFBDF = {
 			isa = PBXGroup;
 			children = (
+				5DA48CC42F85AA48007EC23E /* PomodoroDomain */,
+				5DA48CC52F85AA48007EC23E /* PomodoroUI */,
 				5DA48AEF2F840823001FFBDF /* Pomodoro */,
 				5DA48B022F840824001FFBDF /* PomodoroTests */,
 				5DA48AEE2F840823001FFBDF /* Products */,
@@ -84,12 +93,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D7779142F85B0BC004E85C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5DA48AEF2F840823001FFBDF /* Pomodoro */,
 			);
 			name = Pomodoro;
 			packageProductDependencies = (
+				5DA48CB42F85AA22007EC23E /* PomodoroUI */,
 			);
 			productName = Pomodoro;
 			productReference = 5DA48AED2F840823001FFBDF /* Pomodoro.app */;
@@ -106,6 +117,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D7779162F85B0C6004E85C0 /* PBXTargetDependency */,
 				5DA48B012F840824001FFBDF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
@@ -148,6 +160,9 @@
 			);
 			mainGroup = 5DA48AE42F840823001FFBDF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5DA48AEE2F840823001FFBDF /* Products */;
 			projectDirPath = "";
@@ -194,6 +209,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5D7779142F85B0BC004E85C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5D7779132F85B0BC004E85C0 /* SwiftLintBuildToolPlugin */;
+		};
+		5D7779162F85B0C6004E85C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5D7779152F85B0C6004E85C0 /* SwiftLintBuildToolPlugin */;
+		};
 		5DA48B012F840824001FFBDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5DA48AEC2F840823001FFBDF /* Pomodoro */;
@@ -466,6 +489,34 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D7779132F85B0BC004E85C0 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		5D7779152F85B0C6004E85C0 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7779122F85B0AC004E85C0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		5DA48CB42F85AA22007EC23E /* PomodoroUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PomodoroUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DA48AE52F840823001FFBDF /* Project object */;
 }
