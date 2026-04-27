@@ -7,4 +7,6 @@
 
 public protocol ActivePomodoroStore {
     func load() -> ActivePomodoro?
+    func save(_ activePomodoro: ActivePomodoro)
+    func delete()
 }

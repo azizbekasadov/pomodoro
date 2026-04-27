@@ -64,7 +64,7 @@ extension ClockTests {
         PomodoroConfiguration(
             focusDuration: focusDuration * 60,
             shortBreakDuration: 5 * 60,
-            loongBreakDuration: 15 * 60,
+            longBreakDuration: 15 * 60,
             cyclesBeforeLongBreak: 4
         )
     }
