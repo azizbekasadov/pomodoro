@@ -60,6 +60,10 @@ extension RestoreActivePomodoroUseCaseTests {
             self.activePomodoro = activePomodoro
         }
 
+        func save(_ activePomodoro: PomodoroDomain.ActivePomodoro) {}
+        
+        func delete() {}
+        
         func load() -> ActivePomodoro? {
             return activePomodoro
         }

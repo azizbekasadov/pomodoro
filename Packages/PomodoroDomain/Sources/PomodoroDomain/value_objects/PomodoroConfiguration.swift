@@ -10,13 +10,13 @@ import Foundation
 public struct PomodoroConfiguration: Equatable, Sendable {
     public let focusDuration: TimeInterval
     public let shortBreakDuration: TimeInterval
-    public let loongBreakDuration: TimeInterval
+    public let longBreakDuration: TimeInterval
     public let cyclesBeforeLongBreak: Int
     
-    public init(focusDuration: TimeInterval, shortBreakDuration: TimeInterval, loongBreakDuration: TimeInterval, cyclesBeforeLongBreak: Int) {
+    public init(focusDuration: TimeInterval, shortBreakDuration: TimeInterval, longBreakDuration: TimeInterval, cyclesBeforeLongBreak: Int) {
         self.focusDuration = focusDuration
         self.shortBreakDuration = shortBreakDuration
-        self.loongBreakDuration = loongBreakDuration
+        self.longBreakDuration = longBreakDuration
         self.cyclesBeforeLongBreak = cyclesBeforeLongBreak
     }
 }

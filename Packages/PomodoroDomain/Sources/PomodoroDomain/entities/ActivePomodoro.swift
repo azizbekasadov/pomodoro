@@ -28,3 +28,9 @@ public struct ActivePomodoro: Equatable, Sendable {
         self.completedFocusCount = completedFocusCount
     }
 }
+
+public extension ActivePomodoro {
+    var duration: TimeInterval {
+        endDate.timeIntervalSince(startDate)
+    }
+}
